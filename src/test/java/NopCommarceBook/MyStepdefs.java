@@ -26,13 +26,6 @@ public class MyStepdefs extends BasePage  {
     }
 
 
-    @Then("^User Should click on a Book \"([^\"]*)\"$")
-    public void User_Should_click_on_a_Book(String arg1) {
-        books.selectBook("First Prize Pies");
-        Assert.assertTrue(driver.getCurrentUrl().contains("first-prize-pies"), "User has not selected the book" );
-    }
-
-
     @When("^User navigates to Books category$")
     public void User_navigates_to_Books_category() {
         homePage.navigateToBooks();
